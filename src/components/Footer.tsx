@@ -32,7 +32,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="mailto:contact@vishnuvardhan.dev" 
+                href="mailto:repanavishnuvardhan67664@gmail.com" 
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Mail size={20} />
@@ -89,7 +89,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-gray-400" />
-                <span className="text-gray-400">Available for opportunities</span>
+                <span className="text-gray-400">repanavishnuvardhan67664@gmail.com</span>
               </div>
             </div>
             <div className="mt-4 p-3 bg-gray-800 rounded-lg">

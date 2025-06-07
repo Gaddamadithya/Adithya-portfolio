@@ -39,8 +39,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "Contact via form",
-      action: "#contact-form",
+      value: "repanavishnuvardhan67664@gmail.com",
+      action: "mailto:repanavishnuvardhan67664@gmail.com",
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -82,7 +82,7 @@ const Contact = () => {
                   key={index} 
                   className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                   onClick={() => {
-                    if (method.action.startsWith('http') || method.action.startsWith('tel:')) {
+                    if (method.action.startsWith('http') || method.action.startsWith('tel:') || method.action.startsWith('mailto:')) {
                       window.open(method.action, '_blank');
                     } else if (method.action.startsWith('#')) {
                       document.querySelector(method.action)?.scrollIntoView({ behavior: 'smooth' });
