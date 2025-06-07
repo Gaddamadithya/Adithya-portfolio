@@ -115,7 +115,7 @@ const Contact = () => {
                     asChild
                     className="bg-white text-green-600 hover:bg-green-50"
                   >
-                    <a href="https://wa.me/918217779015" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/919821777915" target="_blank" rel="noopener noreferrer">
                       Chat Now
                     </a>
                   </Button>
