@@ -1,27 +1,27 @@
-
 import React from 'react';
-import { GraduationCap, MapPin, Calendar, Code2 } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, Code2, Download } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const About = () => {
   const education = [
     {
-      degree: "BCA (Bachelor of Computer Applications)",
-      institution: "Aditya Degree College",
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "Aditya Degree College, B. Kotha Kota",
       period: "2023 - 2026",
       status: "Final Year Student",
       icon: <GraduationCap className="w-6 h-6" />
     },
     {
-      degree: "Intermediate",
-      institution: "CEC – Sunku Usha Gowthami Memorial Junior College",
+      degree: "Intermediate (Commerce Stream)",
+      institution: "Sunku Usha Gowthami Memorial Junior College, B. Kotha Kota",
       period: "2021 - 2023",
       status: "Completed",
       icon: <GraduationCap className="w-6 h-6" />
     },
     {
-      degree: "10th Class",
-      institution: "ZPHS High School (PTM)",
+      degree: "Secondary School Certificate (SSC)",
+      institution: "PTM ZPHS High School",
       period: "2016 - 2021",
       status: "Completed",
       icon: <GraduationCap className="w-6 h-6" />
@@ -49,6 +49,22 @@ const About = () => {
             I'm a passionate BCA student specializing in Python full-stack development. 
             I love creating innovative solutions and learning new technologies to solve real-world problems.
           </p>
+          <div className="mt-6">
+            <Button 
+              asChild
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+            >
+              <a 
+                href="/RESUME (1) (2).docxv (2) (1).pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                download
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </a>
+            </Button>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
