@@ -1,0 +1,146 @@
+
+import React from 'react';
+import { GraduationCap, MapPin, Calendar, Code2 } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+
+const About = () => {
+  const education = [
+    {
+      degree: "BCA (Bachelor of Computer Applications)",
+      institution: "Aditya Degree College",
+      period: "2023 - 2026",
+      status: "Final Year Student",
+      icon: <GraduationCap className="w-6 h-6" />
+    },
+    {
+      degree: "Intermediate",
+      institution: "CEC – Sunku Usha Gowthami Memorial Junior College",
+      period: "2021 - 2023",
+      status: "Completed",
+      icon: <GraduationCap className="w-6 h-6" />
+    },
+    {
+      degree: "10th Class",
+      institution: "ZPHS High School (PTM)",
+      period: "2016 - 2021",
+      status: "Completed",
+      icon: <GraduationCap className="w-6 h-6" />
+    }
+  ];
+
+  const skills = [
+    { name: "HTML", level: 90, color: "bg-orange-500" },
+    { name: "CSS", level: 85, color: "bg-blue-500" },
+    { name: "JavaScript", level: 80, color: "bg-yellow-500" },
+    { name: "React JS", level: 75, color: "bg-cyan-500" },
+    { name: "Python", level: 85, color: "bg-green-500" },
+    { name: "Flask", level: 70, color: "bg-gray-600" },
+    { name: "MySQL", level: 75, color: "bg-blue-600" },
+    { name: "Machine Learning", level: 65, color: "bg-purple-500" }
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            I'm a passionate BCA student specializing in Python full-stack development. 
+            I love creating innovative solutions and learning new technologies to solve real-world problems.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Education & Bio */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <GraduationCap className="mr-3 text-blue-600" />
+              Education & Background
+            </h3>
+            <div className="space-y-6">
+              {education.map((edu, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="text-blue-600 mt-1">
+                        {edu.icon}
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 mb-1">{edu.degree}</h4>
+                        <p className="text-gray-600 mb-2">{edu.institution}</p>
+                        <div className="flex items-center space-x-4 text-sm text-gray-500">
+                          <span className="flex items-center">
+                            <Calendar className="w-4 h-4 mr-1" />
+                            {edu.period}
+                          </span>
+                          <span className={`px-2 py-1 rounded-full text-xs ${
+                            edu.status === 'Final Year Student' 
+                              ? 'bg-blue-100 text-blue-800' 
+                              : 'bg-green-100 text-green-800'
+                          }`}>
+                            {edu.status}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="mt-6 bg-blue-50 border-blue-200">
+              <CardContent className="p-6">
+                <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                  <MapPin className="w-5 h-5 mr-2 text-blue-600" />
+                  Contact Information
+                </h4>
+                <div className="space-y-2 text-gray-700">
+                  <p><span className="font-medium">Phone:</span> +91 82177 7915</p>
+                  <p><span className="font-medium">Location:</span> India</p>
+                  <p><span className="font-medium">Status:</span> Available for opportunities</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Skills */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <Code2 className="mr-3 text-blue-600" />
+              Technical Skills
+            </h3>
+            <div className="space-y-6">
+              {skills.map((skill, index) => (
+                <div key={index} className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium text-gray-900">{skill.name}</span>
+                    <span className="text-sm text-gray-600">{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div 
+                      className={`h-3 rounded-full ${skill.color} transition-all duration-1000 ease-out`}
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <Card className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border-0">
+              <CardContent className="p-6 text-center">
+                <h4 className="font-bold text-gray-900 mb-2">Always Learning</h4>
+                <p className="text-gray-600">
+                  Currently exploring advanced React patterns, cloud technologies, 
+                  and machine learning algorithms to expand my skill set.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
