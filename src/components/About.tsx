@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { GraduationCap, MapPin, Calendar, Code2, Download } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,24 +7,24 @@ import { Button } from '@/components/ui/button';
 const About = () => {
   const education = [
     {
-      degree: "Bachelor of Computer Applications (BCA)",
+      degree: "Bachelor of Computer Applications (BCA) — Final Year Student",
       institution: "Aditya Degree College, B. Kotha Kota",
       period: "2023 - 2026",
-      status: "Final Year Student",
+      status: "Expected Graduation: 2026",
       icon: <GraduationCap className="w-6 h-6" />
     },
     {
       degree: "Intermediate (Commerce Stream)",
       institution: "Sunku Usha Gowthami Memorial Junior College, B. Kotha Kota",
       period: "2021 - 2023",
-      status: "Completed",
+      status: "Completed: 2023",
       icon: <GraduationCap className="w-6 h-6" />
     },
     {
       degree: "Secondary School Certificate (SSC)",
       institution: "PTM ZPHS High School",
       period: "2016 - 2021",
-      status: "Completed",
+      status: "Completed: 2021",
       icon: <GraduationCap className="w-6 h-6" />
     }
   ];
@@ -55,10 +56,9 @@ const About = () => {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
             >
               <a 
-                href="/RESUME (1) (2).docxv (2) (1).pdf" 
+                href="https://drive.google.com/file/d/XYZ123/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                download
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
