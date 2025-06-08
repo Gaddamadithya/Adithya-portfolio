@@ -139,8 +139,7 @@ const About = () => {
               <CardContent className="p-6 text-center">
                 <h4 className="font-bold text-gray-900 mb-2">Always Learning</h4>
                 <p className="text-gray-600">
-                  Currently exploring advanced React patterns, cloud technologies, 
-                  and machine learning algorithms to expand my skill set.
+                  Python Full Stack Developer!
                 </p>
               </CardContent>
             </Card>

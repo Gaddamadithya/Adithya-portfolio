@@ -102,7 +102,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center">
-            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> by Vishnu Vardhan • © 2024
+            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> by Vishnu Vardhan • © 2025
           </p>
           <p className="text-sm text-gray-500 mt-2">
             Built with React, TypeScript, and Tailwind CSS
