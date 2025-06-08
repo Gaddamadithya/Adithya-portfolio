@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GraduationCap, MapPin, Calendar, Code2, Download } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -9,21 +8,18 @@ const About = () => {
     {
       degree: "Bachelor of Computer Applications (BCA) — Final Year Student",
       institution: "Aditya Degree College, B. Kotha Kota",
-      period: "2023 - 2026",
       status: "Expected Graduation: 2026",
       icon: <GraduationCap className="w-6 h-6" />
     },
     {
       degree: "Intermediate (Commerce Stream)",
       institution: "Sunku Usha Gowthami Memorial Junior College, B. Kotha Kota",
-      period: "2021 - 2023",
       status: "Completed: 2023",
       icon: <GraduationCap className="w-6 h-6" />
     },
     {
       degree: "Secondary School Certificate (SSC)",
       institution: "PTM ZPHS High School",
-      period: "2016 - 2021",
       status: "Completed: 2021",
       icon: <GraduationCap className="w-6 h-6" />
     }
@@ -86,12 +82,8 @@ const About = () => {
                         <h4 className="font-semibold text-gray-900 mb-1">{edu.degree}</h4>
                         <p className="text-gray-600 mb-2">{edu.institution}</p>
                         <div className="flex items-center space-x-4 text-sm text-gray-500">
-                          <span className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
-                            {edu.period}
-                          </span>
                           <span className={`px-2 py-1 rounded-full text-xs ${
-                            edu.status === 'Final Year Student' 
+                            edu.status.includes('Expected') 
                               ? 'bg-blue-100 text-blue-800' 
                               : 'bg-green-100 text-green-800'
                           }`}>
