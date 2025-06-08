@@ -44,7 +44,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
           {/* Profile Image */}
           <div className="relative">
-            <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl hover:scale-105 transition-transform duration-300">
+            <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300">
               <img 
                 src="/lovable-uploads/42e891e4-de8e-45e9-af4a-746b733e19ec.png" 
                 alt="Vishnu Vardhan" 
