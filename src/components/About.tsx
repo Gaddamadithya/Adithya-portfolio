@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { GraduationCap, MapPin, Calendar, Code2, Download } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -139,7 +140,7 @@ const About = () => {
               <CardContent className="p-6 text-center">
                 <h4 className="font-bold text-gray-900 mb-2">Always Learning</h4>
                 <p className="text-gray-600">
-                  Python Full Stack Developer!
+                  Frontend finesse + backend logic = Python Full Stack Magic 🧠💫
                 </p>
               </CardContent>
             </Card>
