@@ -33,8 +33,11 @@ const About = () => {
     { name: "React JS", level: 75, color: "bg-cyan-500" },
     { name: "Python", level: 85, color: "bg-green-500" },
     { name: "Flask", level: 70, color: "bg-gray-600" },
-    { name: "MySQL", level: 75, color: "bg-blue-600" },
-    { name: "Machine Learning", level: 65, color: "bg-purple-500" }
+    { name: "SQL", level: 80, color: "bg-blue-600" },
+    { name: "AI", level: 75, color: "bg-emerald-500" },
+    { name: "Data Science", level: 70, color: "bg-purple-500" },
+    { name: "Deep Learning", level: 65, color: "bg-indigo-500" },
+    { name: "Machine Learning", level: 75, color: "bg-pink-500" }
   ];
 
   return (
@@ -119,17 +122,20 @@ const About = () => {
               <Code2 className="mr-3 text-blue-600" />
               Technical Skills
             </h3>
-            <div className="space-y-6">
+                 <div className="space-y-6">
               {skills.map((skill, index) => (
-                <div key={index} className="space-y-2">
+                <div key={index} className="space-y-2 animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-gray-900">{skill.name}</span>
                     <span className="text-sm text-gray-600">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                     <div 
-                      className={`h-3 rounded-full ${skill.color} transition-all duration-1000 ease-out`}
-                      style={{ width: `${skill.level}%` }}
+                      className={`h-3 rounded-full ${skill.color} transition-all duration-1000 ease-out animate-slide-in-right hover-scale`}
+                      style={{ 
+                        width: `${skill.level}%`,
+                        animationDelay: `${index * 0.2}s`
+                      }}
                     ></div>
                   </div>
                 </div>

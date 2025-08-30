@@ -69,21 +69,13 @@ const Hero = () => {
               BCA Final Year Student passionate about creating innovative web solutions 
               with Python, React, and modern technologies. Building the future, one line of code at a time.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start">
               <Button 
                 onClick={() => scrollToSection('projects')}
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 animate-scale-in hover-scale"
               >
                 View My Work
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3"
-              >
-                <Download className="mr-2" size={20} />
-                Download Resume
               </Button>
             </div>
           </div>

@@ -1,12 +1,21 @@
 
 import React from 'react';
-import { ExternalLink, Github, Clock, Users, Database, Code } from 'lucide-react';
+import { ExternalLink, Github, Clock, Users, Database, Code, Bot, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 const Projects = () => {
   const projects = [
+    {
+      title: "AI Agent Assistant",
+      description: "An intelligent AI agent that automates tasks with a single prompt. Built with advanced machine learning algorithms and natural language processing to understand and execute complex workflows automatically.",
+      technologies: ["Python", "AI/ML", "NLP", "Deep Learning", "API Integration"],
+      features: ["Single Prompt Automation", "Natural Language Processing", "Task Automation", "Intelligent Responses"],
+      github: "https://github.com/vishnu915/ai-agent-assistant",
+      icon: <Bot className="w-6 h-6" />,
+      color: "from-emerald-500 to-blue-500"
+    },
     {
       title: "Online Exam System",
       description: "A complete web-based examination platform with timer functionality, secure login system, and comprehensive result analysis. Built with Python Flask and MySQL.",
@@ -79,7 +88,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden"
+              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden animate-scale-in hover-scale"
+              style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className={`h-2 bg-gradient-to-r ${project.color}`}></div>
               
