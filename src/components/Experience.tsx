@@ -6,6 +6,21 @@ import { Button } from '@/components/ui/button';
 const Experience = () => {
   const experiences = [
     {
+      title: "Software Development Engineer (SDE)",
+      company: "Infotact Solutions",
+      location: "Remote",
+      duration: "3 Months • Present",
+      description: [
+        "Currently working as a Software Development Engineer, contributing to full-stack development projects.",
+        "Developing and maintaining web applications using modern technologies and frameworks.",
+        "Collaborating with cross-functional teams to deliver high-quality software solutions.",
+        "Implementing best practices in code quality, testing, and documentation."
+      ],
+      certificateLink: "#",
+      icon: <Briefcase className="w-6 h-6" />,
+      current: true
+    },
+    {
       title: "Python Developer Intern",
       company: "Cognifyz Technologies",
       location: "Remote",
@@ -81,6 +96,11 @@ const Experience = () => {
                         </h3>
                         <p className="text-lg text-primary font-semibold mb-2">
                           {exp.company}
+                          {exp.current && (
+                            <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-1 rounded-full">
+                              Current
+                            </span>
+                          )}
                         </p>
                         <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-4">
                           <span className="flex items-center gap-1">
