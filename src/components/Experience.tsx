@@ -16,9 +16,6 @@ const Experience = () => {
         "Collaborating with cross-functional teams to deliver high-quality software solutions.",
         "Implementing best practices in code quality, testing, and documentation."
       ],
-      certificateLink: "#",
-      icon: <Briefcase className="w-6 h-6" />,
-      current: true
     },
     {
       title: "Python Developer Intern",
