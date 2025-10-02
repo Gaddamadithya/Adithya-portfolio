@@ -9,7 +9,7 @@ const Experience = () => {
       title: "Software Development Engineer (SDE)",
       company: "Infotact Solutions",
       location: "Remote",
-      duration: "3 Months • Present",
+      duration: "1 Months • Present",
       description: [
         "Currently working as a Software Development Engineer, contributing to full-stack development projects.",
         "Developing and maintaining web applications using modern technologies and frameworks.",
