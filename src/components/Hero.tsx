@@ -36,9 +36,21 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-40 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse">
+          <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl opacity-60">
+            Innovation
+          </div>
+        </div>
+        <div className="absolute top-40 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000">
+          <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl opacity-60">
+            Creativity
+          </div>
+        </div>
+        <div className="absolute bottom-20 left-40 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000">
+          <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl opacity-60">
+            Excellence
+          </div>
+        </div>
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -74,9 +86,10 @@ const Hero = () => {
               <Button 
                 onClick={() => scrollToSection('projects')}
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 animate-scale-in hover-scale"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 animate-scale-in hover-scale relative overflow-hidden group"
               >
-                View My Work
+                <span className="relative z-10">View My Work</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
               </Button>
             </div>
           </div>
