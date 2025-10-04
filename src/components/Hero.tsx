@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import profileImage from '@/assets/profile.png';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -46,8 +47,8 @@ const Hero = () => {
           <div className="relative">
             <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300">
               <img 
-                src="/lovable-uploads/42e891e4-de8e-45e9-af4a-746b733e19ec.png" 
-                alt="Vishnu Vardhan" 
+                src={profileImage} 
+                alt="Vishnu Vardhan"
                 className="w-full h-full object-cover"
               />
             </div>
