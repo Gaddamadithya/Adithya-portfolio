@@ -89,6 +89,10 @@ export default {
 						height: '0'
 					}
 				},
+				'spin-reverse': {
+					from: { transform: 'rotate(360deg)' },
+					to: { transform: 'rotate(0deg)' }
+				},
 				'fade-in': {
 					'0%': {
 						opacity: '0',
@@ -109,6 +113,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
+				'spin-slow': 'spin 8s linear infinite',
+				'spin-reverse': 'spin-reverse 6s linear infinite',
 			}
 		}
 	},
