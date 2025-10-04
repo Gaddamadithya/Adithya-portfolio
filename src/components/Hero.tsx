@@ -57,19 +57,14 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
           {/* Profile Image */}
           <div className="relative">
-            {/* Animated Border Rings */}
-            <div className="absolute inset-0 -m-1 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 animate-spin-slow opacity-75"></div>
-            <div className="absolute inset-0 -m-2 rounded-full bg-gradient-to-r from-blue-500 via-green-500 to-pink-500 animate-spin-reverse opacity-60"></div>
-            <div className="absolute inset-0 -m-3 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 animate-pulse opacity-50"></div>
-            
-            <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300 border-4 border-white/10">
+            <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300">
               <img 
                 src={profileImage} 
                 alt="Vishnu Vardhan"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/10 to-purple-500/10"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-purple-500/20"></div>
           </div>
 
           {/* Content */}
