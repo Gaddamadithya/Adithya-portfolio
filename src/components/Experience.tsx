@@ -29,7 +29,7 @@ const Experience = () => {
         "Applied OOP concepts to build reusable and modular scripts.",
         "Performed debugging, testing, and documentation to ensure program accuracy."
       ],
-      certificateLink: "#",
+      certificateLink: "https://drive.google.com/file/d/1bbRs9bmLf68-4EirkVB64PlNh5xc6e_N/view?usp=sharing",
       icon: <Briefcase className="w-6 h-6" />
     },
     {
@@ -44,7 +44,7 @@ const Experience = () => {
         "Improved predictive accuracy through feature engineering and hyperparameter tuning.",
         "Achieved a Certificate of Completion and a Recommendation Letter for internship performance."
       ],
-      certificateLink: "#",
+      certificateLink: "https://drive.google.com/file/d/1IvrOfzbXjWpW2ncbxQjXSS-FYnotCmzu/view?usp=drive_link",
       icon: <Briefcase className="w-6 h-6" />
     },
     {
@@ -58,7 +58,7 @@ const Experience = () => {
         "Enhanced teamwork, leadership, and analytical thinking through interactive workshops and hands-on activities.",
         "Earned a Certificate of Completion for successfully completing the program."
       ],
-      certificateLink: "#",
+      certificateLink: "https://drive.google.com/file/d/1olsA-44AC9sah75pkXFbP-mjui2FXDAI/view?usp=sharing",
       icon: <Award className="w-6 h-6" />
     }
   ];
@@ -126,22 +126,24 @@ const Experience = () => {
                       ))}
                     </ul>
 
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="hover-scale"
-                    >
-                      <a
-                        href={exp.certificateLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {exp.certificateLink && (
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="hover-scale"
                       >
-                        <Award className="w-4 h-4 mr-2" />
-                        View Certificate
-                        <ExternalLink className="w-3 h-3 ml-2" />
-                      </a>
-                    </Button>
+                        <a
+                          href={exp.certificateLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Award className="w-4 h-4 mr-2" />
+                          View Certificate
+                          <ExternalLink className="w-3 h-3 ml-2" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </CardContent>
