@@ -32,8 +32,8 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      value: "+91 82177 7915",
-      action: "tel:+918217779015",
+      value: "+91 9182177915",
+      action: "tel:+919182177915",
       color: "from-green-500 to-emerald-500"
     },
     {

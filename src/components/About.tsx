@@ -108,7 +108,7 @@ const About = () => {
                   Contact Information
                 </h4>
                 <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Phone:</span> +91 82177 7915</p>
+                  <p><span className="font-medium">Phone:</span> +91 9182177915</p>
                   <p><span className="font-medium">Location:</span> India</p>
                   <p><span className="font-medium">Status:</span> Available for opportunities</p>
                 </div>
