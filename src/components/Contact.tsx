@@ -46,15 +46,15 @@ const Contact = () => {
     {
       icon: <Github className="w-6 h-6" />,
       title: "GitHub",
-      value: "github.com/vishnu915",
-      action: "https://github.com/vishnu915",
+      value: "github.com/vishnu915/ai-agent",
+      action: "https://github.com/vishnu915/ai-agent",
       color: "from-gray-700 to-gray-900"
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       title: "LinkedIn",
       value: "Connect with me",
-      action: "https://www.linkedin.com/in/repana-vishnu-vardhan-26795b316/",
+      action: "https://www.linkedin.com/in/vishnu-vardhan-26795b316/",
       color: "from-blue-600 to-blue-800"
     }
   ];

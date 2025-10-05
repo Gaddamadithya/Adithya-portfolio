@@ -169,7 +169,7 @@ const Projects = () => {
             size="lg"
             className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
           >
-            <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/vishnu915/ai-agent" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
               Visit My GitHub Profile
             </a>
