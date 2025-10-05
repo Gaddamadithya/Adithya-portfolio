@@ -12,7 +12,7 @@ const Projects = () => {
       description: "An intelligent AI agent that automates tasks with a single prompt. Built with advanced machine learning algorithms and natural language processing to understand and execute complex workflows automatically.",
       technologies: ["Python", "AI/ML", "NLP", "Deep Learning", "API Integration"],
       features: ["Single Prompt Automation", "Natural Language Processing", "Task Automation", "Intelligent Responses"],
-      github: "https://github.com/vishnu915/ai-agent-assistant",
+      github: "https://github.com/vishnu915/ai-agent",
       icon: <Bot className="w-6 h-6" />,
       color: "from-emerald-500 to-blue-500"
     },
@@ -169,7 +169,7 @@ const Projects = () => {
             size="lg"
             className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
           >
-            <a href="https://github.com/vishnu915/ai-agent" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5 mr-2" />
               Visit My GitHub Profile
             </a>

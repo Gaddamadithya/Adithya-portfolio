@@ -54,7 +54,7 @@ const Header = () => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com/vishnu915/ai-agent" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+            <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
               <Github size={20} />
             </a>
             <a href="https://www.linkedin.com/in/vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
@@ -92,7 +92,7 @@ const Header = () => {
                 <span>Contact</span>
               </button>
               <div className="flex items-center space-x-4 pt-4 border-t border-border">
-                <a href="https://github.com/vishnu915/ai-agent" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
                   <Github size={20} />
                 </a>
                 <a href="https://www.linkedin.com/in/vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">

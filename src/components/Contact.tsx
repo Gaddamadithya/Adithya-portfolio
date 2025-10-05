@@ -46,8 +46,8 @@ const Contact = () => {
     {
       icon: <Github className="w-6 h-6" />,
       title: "GitHub",
-      value: "github.com/vishnu915/ai-agent",
-      action: "https://github.com/vishnu915/ai-agent",
+      value: "github.com/vishnu915",
+      action: "https://github.com/vishnu915",
       color: "from-gray-700 to-gray-900"
     },
     {
