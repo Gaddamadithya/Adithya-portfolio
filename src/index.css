@@ -110,4 +110,17 @@
   .hover-pink-scale {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-pink-500/50;
   }
+  
+  .animate-3d-float {
+    transform-style: preserve-3d;
+  }
+  
+  .animate-3d-rotate {
+    transform-style: preserve-3d;
+  }
+  
+  .perspective-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
 }
