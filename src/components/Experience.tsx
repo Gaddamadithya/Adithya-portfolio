@@ -67,7 +67,7 @@ const Experience = () => {
     <section id="experience" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Experience</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 animate-fade-in animate-rgb-text">Experience</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Practical experience through internships and training programs, building real-world skills in Python development, machine learning, and AI.
@@ -89,7 +89,7 @@ const Experience = () => {
                         {exp.icon}
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-foreground mb-1">
+                        <h3 className="text-xl font-bold text-foreground mb-1 animate-3d-tilt">
                           {exp.title}
                         </h3>
                         <p className="text-lg text-primary font-semibold mb-2">

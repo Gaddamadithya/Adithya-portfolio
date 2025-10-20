@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Vishnu Vardhan</h3>
+            <h3 className="text-2xl font-bold mb-4 animate-rgb-text">Vishnu Vardhan</h3>
             <p className="text-gray-400 mb-4">
               Python Full Stack Developer passionate about creating innovative solutions 
               and learning new technologies.
@@ -42,7 +42,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 animate-3d-tilt">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <button 
@@ -81,7 +81,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
+            <h4 className="text-lg font-semibold mb-4 animate-3d-tilt">Get In Touch</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-gray-400" />

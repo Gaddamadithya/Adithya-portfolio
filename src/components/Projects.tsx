@@ -76,7 +76,7 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in animate-rgb-text">Featured Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Here are some of my key projects that showcase my skills in full-stack development, 
@@ -109,7 +109,7 @@ const Projects = () => {
                     </a>
                   </Button>
                 </div>
-                <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors">
+                <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors animate-3d-tilt">
                   {project.title}
                 </CardTitle>
               </CardHeader>

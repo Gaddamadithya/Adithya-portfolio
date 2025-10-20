@@ -63,7 +63,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in animate-rgb-text">Get In Touch</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, 
@@ -74,7 +74,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Methods */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Let's Connect</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 animate-fade-in animate-3d-tilt">Let's Connect</h3>
             
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
               {contactMethods.map((method, index) => (
@@ -141,7 +141,7 @@ const Contact = () => {
           <div>
             <Card className="shadow-xl border-0" id="contact-form">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900 flex items-center">
+                <CardTitle className="text-2xl text-gray-900 flex items-center animate-3d-tilt">
                   <Send className="w-6 h-6 mr-3 text-blue-600" />
                   Send Me a Message
                 </CardTitle>

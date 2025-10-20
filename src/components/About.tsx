@@ -44,7 +44,7 @@ const About = () => {
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in animate-rgb-text">About Me</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             I'm a passionate BCA student specializing in Python full-stack development. 
@@ -70,7 +70,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Education & Bio */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center animate-fade-in animate-3d-tilt">
               <GraduationCap className="mr-3 text-blue-600" />
               Education & Background
             </h3>
@@ -118,7 +118,7 @@ const About = () => {
 
           {/* Skills */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center animate-fade-in animate-3d-tilt">
               <Code2 className="mr-3 text-blue-600" />
               Technical Skills
             </h3>
