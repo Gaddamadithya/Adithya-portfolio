@@ -8,11 +8,11 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: "AI Agent Assistant",
-      description: "An intelligent AI agent that automates tasks with a single prompt. Built with advanced machine learning algorithms and natural language processing to understand and execute complex workflows automatically.",
-      technologies: ["Python", "AI/ML", "NLP", "Deep Learning", "API Integration"],
-      features: ["Single Prompt Automation", "Natural Language Processing", "Task Automation", "Intelligent Responses"],
-      github: "https://github.com/vishnu915/ai-agent",
+      title: "AI Agent for Automated Browser Workflows",
+      description: "Built an intelligent AI agent using Python, browser-use, and LangChain to automate complex web tasks (navigation, search, interaction) from natural language prompts.",
+      technologies: ["Python", "AI/ML", "Gradio", "LLMs (OpenAI, Google)", "LangChain", "browser-use"],
+      features: ["Natural Language Task Automation", "Multiple LLM Integration", "Gradio WebUI", "Agent Configuration & Monitoring"],
+      github: "https://github.com/vishnu915/AI-Agent.git",
       icon: <Bot className="w-6 h-6" />,
       color: "from-emerald-500 to-blue-500"
     },
@@ -35,13 +35,22 @@ const Projects = () => {
       color: "from-green-500 to-teal-500"
     },
     {
-      title: "Vehicle Speed Detection",
-      description: "Python OpenCV-based machine learning project that detects and calculates vehicle speed using camera footage with computer vision algorithms.",
-      technologies: ["Python", "OpenCV", "Machine Learning", "Computer Vision"],
-      features: ["Speed Detection", "Video Processing", "ML Algorithms", "Real-time Analysis"],
-      github: "https://github.com/vishnu915/Vehicle-Speed-Detection-Using-Open-CV",
+      title: "Vehicle Speed Detection System",
+      description: "Engineered a full-stack web application leveraging OpenCV for real-time vehicle speed calculation (95% accuracy) from uploaded videos, with secure user authentication using MySQL.",
+      technologies: ["ML", "Python", "Flask", "OpenCV", "MySQL", "HTML/CSS", "JavaScript"],
+      features: ["95% Speed Accuracy", "Object Tracking", "Responsive UI", "Video Upload & Processing"],
+      github: "https://github.com/vishnu915/Vehicle-Speed-Detection-Using-Open-CV/tree/master",
       icon: <Code className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Online Fee Management System",
+      description: "Developed a custom full-stack portal for automated college fee management based on direct stakeholder requirements. Features secure admin authentication and automated payment processing.",
+      technologies: ["Python", "Flask", "MySQL", "HTML/CSS", "JavaScript"],
+      features: ["Admin Dashboard", "PDF Receipt Generation", "Financial Analytics", "Payment Processing"],
+      github: "https://github.com/vishnu915/online-fee-management-system",
+      icon: <Database className="w-6 h-6" />,
+      color: "from-cyan-500 to-blue-500"
     },
     {
       title: "Banking Application",
