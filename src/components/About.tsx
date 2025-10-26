@@ -26,18 +26,97 @@ const About = () => {
     }
   ];
 
-  const skills = [
-    { name: "HTML", level: 90, color: "bg-orange-500" },
-    { name: "CSS", level: 85, color: "bg-blue-500" },
-    { name: "JavaScript", level: 80, color: "bg-yellow-500" },
-    { name: "React JS", level: 75, color: "bg-cyan-500" },
-    { name: "Python", level: 85, color: "bg-green-500" },
-    { name: "Flask", level: 70, color: "bg-gray-600" },
-    { name: "SQL", level: 80, color: "bg-blue-600" },
-    { name: "AI", level: 75, color: "bg-emerald-500" },
-    { name: "Data Science", level: 70, color: "bg-purple-500" },
-    { name: "Deep Learning", level: 65, color: "bg-indigo-500" },
-    { name: "Machine Learning", level: 75, color: "bg-pink-500" }
+  const skillCategories = [
+    {
+      category: "Programming Languages",
+      skills: [
+        { name: "Python", level: "Advanced", color: "from-blue-500 to-cyan-500" },
+        { name: "Java", level: "Intermediate", color: "from-orange-500 to-red-500" }
+      ],
+      animation: "animate-fade-in hover:scale-105"
+    },
+    {
+      category: "Web Development",
+      skills: [
+        { name: "HTML", level: "Advanced", color: "from-orange-400 to-red-400" },
+        { name: "CSS", level: "Advanced", color: "from-blue-400 to-indigo-400" },
+        { name: "JavaScript", level: "Intermediate", color: "from-yellow-400 to-orange-400" },
+        { name: "React.js", level: "Intermediate", color: "from-cyan-400 to-blue-400" },
+        { name: "Node.js", level: "Intermediate", color: "from-green-400 to-emerald-400" }
+      ],
+      animation: "animate-scale-in hover:rotate-1"
+    },
+    {
+      category: "Frameworks",
+      skills: [
+        { name: "Flask", level: "Intermediate", color: "from-gray-600 to-gray-800" },
+        { name: "Django", level: "Beginner", color: "from-green-600 to-teal-600" }
+      ],
+      animation: "animate-slide-in-right hover:-rotate-1"
+    },
+    {
+      category: "Databases",
+      skills: [
+        { name: "MySQL", level: "Intermediate", color: "from-blue-600 to-indigo-600" },
+        { name: "SQL", level: "Intermediate", color: "from-purple-500 to-pink-500" },
+        { name: "MongoDB", level: "Beginner", color: "from-green-500 to-lime-500" },
+        { name: "Pinecone", level: "Intermediate", color: "from-indigo-500 to-purple-500" },
+        { name: "FAISS", level: "Intermediate", color: "from-cyan-500 to-blue-500" }
+      ],
+      animation: "animate-fade-in hover:translate-x-2"
+    },
+    {
+      category: "AI & Machine Learning",
+      skills: [
+        { name: "Machine Learning", level: "Intermediate", color: "from-pink-500 to-rose-500" },
+        { name: "Deep Learning", level: "Intermediate", color: "from-indigo-500 to-blue-500" },
+        { name: "NLP", level: "Intermediate", color: "from-purple-500 to-indigo-500" },
+        { name: "Data Science", level: "Intermediate", color: "from-emerald-500 to-teal-500" },
+        { name: "NumPy", level: "Intermediate", color: "from-blue-400 to-cyan-400" },
+        { name: "Pandas", level: "Intermediate", color: "from-indigo-400 to-purple-400" },
+        { name: "Scikit-learn", level: "Intermediate", color: "from-orange-400 to-amber-400" },
+        { name: "TensorFlow", level: "Intermediate", color: "from-orange-500 to-red-500" },
+        { name: "PyTorch", level: "Intermediate", color: "from-red-500 to-pink-500" },
+        { name: "OpenCV", level: "Intermediate", color: "from-green-500 to-emerald-500" },
+        { name: "OpenAI GPT", level: "Intermediate", color: "from-purple-600 to-pink-600" },
+        { name: "Google Gemini", level: "Intermediate", color: "from-blue-600 to-indigo-600" },
+        { name: "RAG", level: "Intermediate", color: "from-cyan-600 to-blue-600" }
+      ],
+      animation: "animate-scale-in hover:shadow-2xl"
+    },
+    {
+      category: "Tools & Platforms",
+      skills: [
+        { name: "Git", level: "Intermediate", color: "from-orange-600 to-red-600" },
+        { name: "GitHub", level: "Intermediate", color: "from-gray-700 to-gray-900" },
+        { name: "Postman", level: "Intermediate", color: "from-orange-500 to-amber-500" },
+        { name: "Jupyter", level: "Intermediate", color: "from-orange-400 to-red-400" },
+        { name: "VS Code", level: "Advanced", color: "from-blue-500 to-cyan-500" },
+        { name: "IntelliJ IDEA", level: "Intermediate", color: "from-purple-600 to-pink-600" },
+        { name: "MySQL Workbench", level: "Intermediate", color: "from-blue-600 to-indigo-600" },
+        { name: "Jira", level: "Intermediate", color: "from-blue-500 to-purple-500" },
+        { name: "Docker", level: "Intermediate", color: "from-cyan-500 to-blue-500" }
+      ],
+      animation: "animate-fade-in hover:-translate-y-1"
+    },
+    {
+      category: "Cloud Services",
+      skills: [
+        { name: "Azure", level: "Beginner", color: "from-blue-600 to-cyan-600" }
+      ],
+      animation: "animate-slide-in-right hover:scale-110"
+    },
+    {
+      category: "Soft Skills",
+      skills: [
+        { name: "Problem Solving", level: "Advanced", color: "from-green-500 to-emerald-500" },
+        { name: "Communication", level: "Advanced", color: "from-blue-500 to-indigo-500" },
+        { name: "Team Collaboration", level: "Advanced", color: "from-purple-500 to-pink-500" },
+        { name: "Quick Learning", level: "Advanced", color: "from-orange-500 to-red-500" },
+        { name: "Adaptability", level: "Advanced", color: "from-cyan-500 to-blue-500" }
+      ],
+      animation: "animate-scale-in hover:rotate-2"
+    }
   ];
 
   return (
@@ -122,29 +201,40 @@ const About = () => {
               <Code2 className="mr-3 text-blue-600" />
               Technical Skills
             </h3>
-                 <div className="space-y-6">
-              {skills.map((skill, index) => (
-                <div key={index} className="space-y-2 animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-gray-900">{skill.name}</span>
-                    <span className="text-sm text-gray-600">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                    <div 
-                      className={`h-3 rounded-full ${skill.color} transition-all duration-1000 ease-out animate-slide-in-right hover-scale`}
-                      style={{ 
-                        width: `${skill.level}%`,
-                        animationDelay: `${index * 0.2}s`
-                      }}
-                    ></div>
-                  </div>
-                </div>
+            <div className="space-y-6">
+              {skillCategories.map((category, catIndex) => (
+                <Card 
+                  key={catIndex} 
+                  className={`overflow-hidden border-0 shadow-lg transition-all duration-300 ${category.animation}`}
+                  style={{animationDelay: `${catIndex * 0.15}s`}}
+                >
+                  <CardContent className="p-5">
+                    <h4 className="font-bold text-gray-900 mb-4 text-lg animate-rgb-text">
+                      {category.category}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill, skillIndex) => (
+                        <div
+                          key={skillIndex}
+                          className={`group relative px-4 py-2 rounded-full bg-gradient-to-r ${skill.color} text-white text-sm font-medium transition-all duration-300 hover:scale-110 hover:shadow-xl animate-fade-in cursor-pointer`}
+                          style={{animationDelay: `${(catIndex * 0.1) + (skillIndex * 0.05)}s`}}
+                        >
+                          <span className="relative z-10">{skill.name}</span>
+                          <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-white text-gray-800 text-xs px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                            {skill.level}
+                          </span>
+                          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300"></div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
 
-            <Card className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border-0">
+            <Card className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border-0 animate-fade-in hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-6 text-center">
-                <h4 className="font-bold text-gray-900 mb-2">Always Learning</h4>
+                <h4 className="font-bold text-gray-900 mb-2 animate-rgb-text">Always Learning</h4>
                 <p className="text-gray-600">
                   Frontend finesse + backend logic = Python Full Stack Magic 🧠💫
                 </p>
