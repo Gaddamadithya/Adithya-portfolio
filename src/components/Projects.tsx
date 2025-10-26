@@ -44,15 +44,6 @@ const Projects = () => {
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Online Fee Management System",
-      description: "Developed a custom full-stack portal for automated college fee management based on direct stakeholder requirements. Features secure admin authentication and automated payment processing.",
-      technologies: ["Python", "Flask", "MySQL", "HTML/CSS", "JavaScript"],
-      features: ["Admin Dashboard", "PDF Receipt Generation", "Financial Analytics", "Payment Processing"],
-      github: "https://github.com/vishnu915/online-fee-management-system",
-      icon: <Database className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
       title: "Banking Application",
       description: "A secure banking system featuring balance checking, money transfers, transaction history, and user account management with robust security measures.",
       technologies: ["Python", "Flask", "MySQL", "Security", "Authentication"],
