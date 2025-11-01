@@ -135,7 +135,7 @@ const About = () => {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
             >
               <a 
-                href="https://drive.google.com/file/d/1lykyKoj3xzASGfEtPA2DmGnQJmB_qQJT/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1fbA_AXSUO5R70uUyPQIO2QzOqHDHdmd0/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
