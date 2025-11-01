@@ -67,7 +67,7 @@ const Experience = () => {
     <section id="experience" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4 animate-fade-in animate-rgb-text">Experience</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">Experience</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Practical experience through internships and training programs, building real-world skills in Python development, machine learning, and AI.
@@ -78,8 +78,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card 
               key={index} 
-              className="hover:shadow-lg transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="hover:shadow-lg transition-all duration-300"
             >
               <CardContent className="p-6">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
@@ -89,7 +88,7 @@ const Experience = () => {
                         {exp.icon}
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-foreground mb-1 animate-3d-tilt">
+                        <h3 className="text-xl font-bold text-foreground mb-1">
                           {exp.title}
                         </h3>
                         <p className="text-lg text-primary font-semibold mb-2">
@@ -117,8 +116,7 @@ const Experience = () => {
                       {exp.description.map((item, i) => (
                         <li 
                           key={i} 
-                          className="text-muted-foreground flex items-start animate-fade-in"
-                          style={{ animationDelay: `${(index * 0.1) + (i * 0.05)}s` }}
+                          className="text-muted-foreground flex items-start"
                         >
                           <span className="text-primary mr-2">•</span>
                           <span>{item}</span>
@@ -131,7 +129,7 @@ const Experience = () => {
                         asChild
                         variant="outline"
                         size="sm"
-                        className="hover-scale"
+                        className="transition-all duration-300 hover:scale-105"
                       >
                         <a
                           href={exp.certificateLink}

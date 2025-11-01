@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-    } before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500/20 before:via-purple-500/20 before:to-blue-500/20 before:animate-[rgb-shift_3s_ease-in-out_infinite] before:-z-10 after:absolute after:inset-0 after:bg-gradient-to-l after:from-blue-500/10 after:via-pink-500/10 after:to-purple-500/10 after:animate-[color-shift_2s_ease-in-out_infinite] after:-z-10`}>
+    }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="text-2xl font-bold text-primary">
@@ -34,30 +34,30 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button onClick={() => scrollToSection('home')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-all duration-300 hover:scale-110 active:scale-95 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500/20 before:to-purple-500/20 before:blur-lg before:opacity-0 hover:before:opacity-100 before:transition-opacity before:animate-[pink-glow_2s_ease-in-out_infinite]">
-              <Home size={18} className="animate-[bounce-3d_2s_ease-in-out_infinite]" />
+            <button onClick={() => scrollToSection('home')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-300">
+              <Home size={18} />
               <span>Home</span>
             </button>
-            <button onClick={() => scrollToSection('about')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-all duration-300 hover:scale-110 active:scale-95 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/20 before:to-cyan-500/20 before:blur-lg before:opacity-0 hover:before:opacity-100 before:transition-opacity before:animate-[multi-glow_3s_ease-in-out_infinite]">
-              <User size={18} className="animate-[tilt-3d_3s_ease-in-out_infinite]" />
+            <button onClick={() => scrollToSection('about')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-300">
+              <User size={18} />
               <span>About</span>
             </button>
-            <button onClick={() => scrollToSection('projects')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-all duration-300 hover:scale-110 active:scale-95 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/20 before:to-pink-500/20 before:blur-lg before:opacity-0 hover:before:opacity-100 before:transition-opacity before:animate-[color-shift_2s_ease-in-out_infinite]">
-              <Code size={18} className="animate-[float-3d_4s_ease-in-out_infinite]" />
+            <button onClick={() => scrollToSection('projects')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-300">
+              <Code size={18} />
               <span>Projects</span>
             </button>
-            <button onClick={() => scrollToSection('contact')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-all duration-300 hover:scale-110 active:scale-95 relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-green-500/20 before:to-blue-500/20 before:blur-lg before:opacity-0 hover:before:opacity-100 before:transition-opacity before:animate-[rgb-shift_3s_ease-in-out_infinite]">
-              <Mail size={18} className="animate-[bounce-3d_2.5s_ease-in-out_infinite]" />
+            <button onClick={() => scrollToSection('contact')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-300">
+              <Mail size={18} />
               <span>Contact</span>
             </button>
           </nav>
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-300 hover:scale-125 active:scale-95 hover:rotate-12 animate-[multi-glow_2s_ease-in-out_infinite]">
+            <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-300 hover:scale-125 active:scale-95 hover:-rotate-12 animate-[pink-glow_3s_ease-in-out_infinite]">
+            <a href="https://www.linkedin.com/in/vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
               <Linkedin size={20} />
             </a>
           </div>
@@ -73,29 +73,29 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 py-4 border-t border-border animate-fade-in">
+          <nav className="md:hidden mt-4 py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
-              <button onClick={() => scrollToSection('home')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95 hover:translate-x-2">
-                <Home size={18} className="animate-[bounce-3d_2s_ease-in-out_infinite]" />
+              <button onClick={() => scrollToSection('home')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-300">
+                <Home size={18} />
                 <span>Home</span>
               </button>
-              <button onClick={() => scrollToSection('about')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95 hover:translate-x-2">
-                <User size={18} className="animate-[tilt-3d_3s_ease-in-out_infinite]" />
+              <button onClick={() => scrollToSection('about')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-300">
+                <User size={18} />
                 <span>About</span>
               </button>
-              <button onClick={() => scrollToSection('projects')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95 hover:translate-x-2">
-                <Code size={18} className="animate-[float-3d_4s_ease-in-out_infinite]" />
+              <button onClick={() => scrollToSection('projects')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-300">
+                <Code size={18} />
                 <span>Projects</span>
               </button>
-              <button onClick={() => scrollToSection('contact')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95 hover:translate-x-2">
-                <Mail size={18} className="animate-[bounce-3d_2.5s_ease-in-out_infinite]" />
+              <button onClick={() => scrollToSection('contact')} className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors duration-300">
+                <Mail size={18} />
                 <span>Contact</span>
               </button>
               <div className="flex items-center space-x-4 pt-4 border-t border-border">
-                <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-300 hover:scale-125 active:scale-95 hover:rotate-12 animate-[multi-glow_2s_ease-in-out_infinite]">
+                <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
                   <Github size={20} />
                 </a>
-                <a href="https://www.linkedin.com/in/vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-300 hover:scale-125 active:scale-95 hover:-rotate-12 animate-[pink-glow_3s_ease-in-out_infinite]">
+                <a href="https://www.linkedin.com/in/vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
                   <Linkedin size={20} />
                 </a>
               </div>

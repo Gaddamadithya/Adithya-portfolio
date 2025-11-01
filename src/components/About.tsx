@@ -123,7 +123,7 @@ const About = () => {
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in animate-rgb-text">About Me</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             I'm a passionate BCA student specializing in Python full-stack development. 
@@ -149,7 +149,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Education & Bio */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center animate-fade-in animate-3d-tilt">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
               <GraduationCap className="mr-3 text-blue-600" />
               Education & Background
             </h3>
@@ -197,7 +197,7 @@ const About = () => {
 
           {/* Skills */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center animate-fade-in animate-3d-tilt">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
               <Code2 className="mr-3 text-blue-600" />
               Technical Skills
             </h3>
@@ -205,19 +205,17 @@ const About = () => {
               {skillCategories.map((category, catIndex) => (
                 <Card 
                   key={catIndex} 
-                  className={`overflow-hidden border-0 shadow-lg transition-all duration-300 ${category.animation}`}
-                  style={{animationDelay: `${catIndex * 0.15}s`}}
+                  className="overflow-hidden border-0 shadow-lg"
                 >
                   <CardContent className="p-5">
-                    <h4 className="font-bold text-gray-900 mb-4 text-lg animate-rgb-text">
+                    <h4 className="font-bold text-gray-900 mb-4 text-lg">
                       {category.category}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill, skillIndex) => (
                         <div
                           key={skillIndex}
-                          className={`group relative px-4 py-2 rounded-full bg-gradient-to-r ${skill.color} text-white text-sm font-medium transition-all duration-300 hover:scale-110 hover:shadow-xl animate-fade-in cursor-pointer`}
-                          style={{animationDelay: `${(catIndex * 0.1) + (skillIndex * 0.05)}s`}}
+                          className={`group relative px-4 py-2 rounded-full bg-gradient-to-r ${skill.color} text-white text-sm font-medium transition-all duration-300 hover:scale-110 hover:shadow-xl cursor-pointer`}
                         >
                           <span className="relative z-10">{skill.name}</span>
                           <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-white text-gray-800 text-xs px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
@@ -232,9 +230,9 @@ const About = () => {
               ))}
             </div>
 
-            <Card className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border-0 animate-fade-in hover:shadow-2xl transition-all duration-300">
+            <Card className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border-0 hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-6 text-center">
-                <h4 className="font-bold text-gray-900 mb-2 animate-rgb-text">Always Learning</h4>
+                <h4 className="font-bold text-gray-900 mb-2">Always Learning</h4>
                 <p className="text-gray-600">
                   Frontend finesse + backend logic = Python Full Stack Magic 🧠💫
                 </p>
