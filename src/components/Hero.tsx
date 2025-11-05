@@ -7,7 +7,14 @@ import profileImage from '@/assets/profile.png';
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const texts = ['Python Full Stack Developer', 'BCA Student', 'Problem Solver', 'Tech Enthusiast'];
+  const texts = [
+    'SDE Intern @ Infotact Solutions',
+    'Python Full Stack Developer',
+    'Flask & React Specialist',
+    'REST APIs & MySQL Expert',
+    'Azure Cloud & AI/ML',
+    'Problem Solving & AI R&D'
+  ];
   const fullText = texts[currentIndex % texts.length];
 
   useEffect(() => {
