@@ -54,7 +54,7 @@ const Contact = () => {
       icon: <Linkedin className="w-6 h-6" />,
       title: "LinkedIn",
       value: "Connect with me",
-      action: "https://www.linkedin.com/in/vishnu-vardhan-26795b316/",
+      action: "https://www.linkedin.com/in/repana-vishnu-vardhan-26795b316/",
       color: "from-blue-600 to-blue-800"
     }
   ];

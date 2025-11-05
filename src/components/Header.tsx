@@ -57,7 +57,7 @@ const Header = () => {
             <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/repana-vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
               <Linkedin size={20} />
             </a>
           </div>
@@ -95,7 +95,7 @@ const Header = () => {
                 <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
                   <Github size={20} />
                 </a>
-                <a href="https://www.linkedin.com/in/vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
+                <a href="https://www.linkedin.com/in/repana-vishnu-vardhan-26795b316/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
                   <Linkedin size={20} />
                 </a>
               </div>
