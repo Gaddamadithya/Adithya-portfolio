@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Home, User, Code, Mail, Github, Linkedin } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,6 +55,7 @@ const Header = () => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
               <Github size={20} />
             </a>
@@ -92,6 +94,7 @@ const Header = () => {
                 <span>Contact</span>
               </button>
               <div className="flex items-center space-x-4 pt-4 border-t border-border">
+                <ThemeToggle />
                 <a href="https://github.com/vishnu915" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300">
                   <Github size={20} />
                 </a>
