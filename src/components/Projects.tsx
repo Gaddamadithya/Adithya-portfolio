@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
+      title: "Project Management Web App",
+      description: "A full-stack MERN application for managing projects with secure authentication, CRUD operations, and timeline tracking. Features user-specific project views and clean responsive UI.",
+      technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "JWT"],
+      features: ["Create, Update & Delete Projects", "Secure JWT Authentication", "User-Specific Views", "Project Timeline Tracking"],
+      github: "https://github.com/vishnu915/Project-Management-Web-Application.git",
+      icon: <Zap className="w-6 h-6" />,
+      color: "from-violet-500 to-purple-500"
+    },
+    {
       title: "AI Agent for Automated Browser Workflows",
       description: "Built an intelligent AI agent using Python, browser-use, and LangChain to automate complex web tasks (navigation, search, interaction) from natural language prompts.",
       technologies: ["Python", "AI/ML", "Gradio", "LLMs (OpenAI, Google)", "LangChain", "browser-use"],
