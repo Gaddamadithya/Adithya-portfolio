@@ -132,7 +132,11 @@ const Projects = () => {
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Technologies:</h4>
                     <div className="flex flex-wrap gap-1">
                       {project.technologies.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                        <Badge 
+                          key={techIndex} 
+                          variant="secondary" 
+                          className="text-xs badge-rotate-colorful text-white font-medium shadow-md hover:shadow-lg transition-shadow"
+                        >
                           {tech}
                         </Badge>
                       ))}

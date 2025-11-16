@@ -123,4 +123,27 @@
     perspective: 1000px;
     transform-style: preserve-3d;
   }
+
+  .badge-rotate-colorful {
+    animation: rotate-colors 4s ease-in-out infinite;
+  }
+
+  @keyframes rotate-colors {
+    0%, 100% {
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      background: linear-gradient(135deg, #f7931e 0%, #fbb034 100%);
+      transform: rotate(2deg) scale(1.05);
+    }
+    50% {
+      background: linear-gradient(135deg, #fbb034 0%, #ff6b35 100%);
+      transform: rotate(-2deg) scale(1.05);
+    }
+    75% {
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      transform: rotate(2deg) scale(1.05);
+    }
+  }
 }
