@@ -68,7 +68,7 @@ const Experience = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">Experience</h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+          <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Practical experience through internships and training programs, building real-world skills in Python development, machine learning, and AI.
           </p>
@@ -78,7 +78,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card 
               key={index} 
-              className="hover:shadow-lg transition-all duration-300"
+              className="animated-border hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               <CardContent className="p-6">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
