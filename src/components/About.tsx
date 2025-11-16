@@ -124,7 +124,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             I'm a passionate BCA student specializing in Python full-stack development. 
             I love creating innovative solutions and learning new technologies to solve real-world problems.
@@ -155,7 +155,7 @@ const About = () => {
             </h3>
             <div className="space-y-6">
               {education.map((edu, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                <Card key={index} className="animated-border hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="text-blue-600 mt-1">
