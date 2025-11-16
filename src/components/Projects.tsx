@@ -86,7 +86,7 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Here are some of my key projects that showcase my skills in full-stack development, 
             machine learning, and problem-solving.
@@ -97,7 +97,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden"
+              className="group animated-border hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
             >
               <div className={`h-2 bg-gradient-to-r ${project.color}`}></div>
               

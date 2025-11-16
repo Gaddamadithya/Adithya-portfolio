@@ -64,7 +64,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in animate-rgb-text">Get In Touch</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, 
             or just having a chat about technology. Let's connect!
@@ -80,7 +80,7 @@ const Contact = () => {
               {contactMethods.map((method, index) => (
                 <Card 
                   key={index} 
-                  className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                  className="animated-border group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                   onClick={() => {
                     if (method.action.startsWith('http') || method.action.startsWith('tel:') || method.action.startsWith('mailto:')) {
                       window.open(method.action, '_blank');
@@ -101,7 +101,7 @@ const Contact = () => {
             </div>
 
             {/* WhatsApp CTA */}
-            <Card className="bg-gradient-to-r from-green-500 to-emerald-600 text-white border-0">
+            <Card className="animated-border bg-gradient-to-r from-green-500 to-emerald-600 text-white">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <MessageCircle className="w-8 h-8" />
@@ -124,7 +124,7 @@ const Contact = () => {
             </Card>
 
             {/* Location */}
-            <Card className="mt-6 bg-blue-50 border-blue-200">
+            <Card className="animated-border mt-6 bg-blue-50 border-blue-200">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-6 h-6 text-blue-600" />
@@ -139,7 +139,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <Card className="shadow-xl border-0" id="contact-form">
+            <Card className="animated-border shadow-xl" id="contact-form">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-900 flex items-center animate-3d-tilt">
                   <Send className="w-6 h-6 mr-3 text-blue-600" />
