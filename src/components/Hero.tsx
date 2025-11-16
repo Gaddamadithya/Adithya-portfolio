@@ -40,7 +40,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden pt-20">
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
