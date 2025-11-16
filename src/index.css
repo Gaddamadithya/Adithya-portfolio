@@ -146,4 +146,88 @@
       transform: rotate(2deg) scale(1.05);
     }
   }
+
+  .animated-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6) border-box;
+    animation: border-rotate 3s linear infinite;
+  }
+
+  .dark .animated-border {
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6) border-box;
+  }
+
+  @keyframes border-rotate {
+    0% {
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6) border-box;
+    }
+    25% {
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(135deg, #8b5cf6, #ec4899, #3b82f6, #8b5cf6) border-box;
+    }
+    50% {
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(135deg, #ec4899, #3b82f6, #8b5cf6, #ec4899) border-box;
+    }
+    75% {
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6) border-box;
+    }
+    100% {
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6) border-box;
+    }
+  }
+
+  .dark .animated-border {
+    animation: border-rotate-dark 3s linear infinite;
+  }
+
+  @keyframes border-rotate-dark {
+    0% {
+      background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                  linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6) border-box;
+    }
+    25% {
+      background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                  linear-gradient(135deg, #8b5cf6, #ec4899, #3b82f6, #8b5cf6) border-box;
+    }
+    50% {
+      background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                  linear-gradient(135deg, #ec4899, #3b82f6, #8b5cf6, #ec4899) border-box;
+    }
+    75% {
+      background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                  linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6) border-box;
+    }
+    100% {
+      background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                  linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6) border-box;
+    }
+  }
+
+  .hr-gradient-animated {
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #3b82f6);
+    background-size: 200% 100%;
+    animation: gradient-shift 3s ease infinite;
+    border: none;
+    border-radius: 2px;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
