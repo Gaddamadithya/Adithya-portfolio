@@ -2,6 +2,8 @@ import React from 'react';
 import { Briefcase, Calendar, MapPin, Award, ExternalLink, Trophy } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
+
 
 const Experience = () => {
   const experiences = [
@@ -63,9 +65,11 @@ const Experience = () => {
     }
   ];
 
+  const { elementRef, isVisible } = useScrollReveal();
+
   return (
-    <section id="experience" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="py-20 bg-background" ref={elementRef}>
+      <div className={`container mx-auto px-4 scroll-reveal ${isVisible ? 'scroll-reveal-visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
             <Trophy className="w-10 h-10 text-blue-600 icon-pulse-hover" />

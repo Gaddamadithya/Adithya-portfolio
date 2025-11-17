@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -59,9 +61,11 @@ const Contact = () => {
     }
   ];
 
+  const { elementRef, isVisible } = useScrollReveal();
+
   return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-gray-50" ref={elementRef}>
+      <div className={`container mx-auto px-4 scroll-reveal ${isVisible ? 'scroll-reveal-visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in animate-rgb-text flex items-center justify-center gap-3">
             <Send className="w-10 h-10 text-blue-600 icon-pulse-hover" />
