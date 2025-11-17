@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GraduationCap, MapPin, Calendar, Code2, Download } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, Code2, Download, User } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -123,7 +123,10 @@ const About = () => {
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
+            <User className="w-10 h-10 text-blue-600 icon-pulse-hover" />
+            About Me
+          </h2>
           <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             I'm a passionate BCA student specializing in Python full-stack development. 

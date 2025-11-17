@@ -230,4 +230,8 @@
       background-position: 0% 50%;
     }
   }
+
+  .icon-pulse-hover {
+    @apply transition-all duration-300 hover:scale-110 hover:animate-[pulse_1s_ease-in-out_infinite];
+  }
 }

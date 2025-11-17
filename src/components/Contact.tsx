@@ -63,7 +63,10 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in animate-rgb-text">Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in animate-rgb-text flex items-center justify-center gap-3">
+            <Send className="w-10 h-10 text-blue-600 icon-pulse-hover" />
+            Get In Touch
+          </h2>
           <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, 

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExternalLink, Github, Clock, Users, Database, Code, Bot, Zap } from 'lucide-react';
+import { ExternalLink, Github, Clock, Users, Database, Code, Bot, Zap, Code2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -85,7 +85,10 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
+            <Code2 className="w-10 h-10 text-blue-600 icon-pulse-hover" />
+            Featured Projects
+          </h2>
           <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Here are some of my key projects that showcase my skills in full-stack development, 
