@@ -3,6 +3,8 @@ import React from 'react';
 import { ExternalLink, Github, Clock, Users, Database, Code, Bot, Zap, Code2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
+
 import { Badge } from '@/components/ui/badge';
 
 const Projects = () => {
@@ -81,9 +83,11 @@ const Projects = () => {
     }
   ];
 
+  const { elementRef, isVisible } = useScrollReveal();
+
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-20 bg-white" ref={elementRef}>
+      <div className={`container mx-auto px-4 scroll-reveal ${isVisible ? 'scroll-reveal-visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
             <Code2 className="w-10 h-10 text-blue-600 icon-pulse-hover" />
