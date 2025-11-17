@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Calendar, MapPin, Award, ExternalLink } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, Award, ExternalLink, Trophy } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -67,7 +67,10 @@ const Experience = () => {
     <section id="experience" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Experience</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
+            <Trophy className="w-10 h-10 text-blue-600 icon-pulse-hover" />
+            Experience
+          </h2>
           <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Practical experience through internships and training programs, building real-world skills in Python development, machine learning, and AI.
