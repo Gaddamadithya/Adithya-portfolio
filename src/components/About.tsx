@@ -4,6 +4,14 @@ import { GraduationCap, MapPin, Calendar, Code2, Download, User } from 'lucide-r
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useScrollReveal } from '@/hooks/use-scroll-reveal';
+import { 
+  SiPython, SiJavascript, SiReact, SiNodedotjs, SiFlask, SiDjango,
+  SiMysql, SiMongodb, SiTensorflow, SiPytorch, SiOpencv, SiNumpy,
+  SiPandas, SiScikitlearn, SiGit, SiGithub, SiPostman, SiJupyter,
+  SiIntellijidea, SiJira, SiDocker,
+  SiHtml5, SiCss3, SiOpenai
+} from 'react-icons/si';
+import { Coffee, Code, Cloud } from 'lucide-react';
 
 
 const About = () => {
@@ -32,92 +40,64 @@ const About = () => {
     {
       category: "Programming Languages",
       skills: [
-        { name: "Python", level: "Advanced", color: "from-blue-500 to-cyan-500" },
-        { name: "Java", level: "Intermediate", color: "from-orange-500 to-red-500" }
-      ],
-      animation: "animate-fade-in hover:scale-105"
+        { name: "Python", level: "Advanced", icon: SiPython, color: "#3776AB" },
+        { name: "Java", level: "Intermediate", icon: Coffee, color: "#007396" }
+      ]
     },
     {
       category: "Web Development",
       skills: [
-        { name: "HTML", level: "Advanced", color: "from-orange-400 to-red-400" },
-        { name: "CSS", level: "Advanced", color: "from-blue-400 to-indigo-400" },
-        { name: "JavaScript", level: "Intermediate", color: "from-yellow-400 to-orange-400" },
-        { name: "React.js", level: "Intermediate", color: "from-cyan-400 to-blue-400" },
-        { name: "Node.js", level: "Intermediate", color: "from-green-400 to-emerald-400" }
-      ],
-      animation: "animate-scale-in hover:rotate-1"
+        { name: "HTML", level: "Advanced", icon: SiHtml5, color: "#E34F26" },
+        { name: "CSS", level: "Advanced", icon: SiCss3, color: "#1572B6" },
+        { name: "JavaScript", level: "Intermediate", icon: SiJavascript, color: "#F7DF1E" },
+        { name: "React.js", level: "Intermediate", icon: SiReact, color: "#61DAFB" },
+        { name: "Node.js", level: "Intermediate", icon: SiNodedotjs, color: "#339933" }
+      ]
     },
     {
       category: "Frameworks",
       skills: [
-        { name: "Flask", level: "Intermediate", color: "from-gray-600 to-gray-800" },
-        { name: "Django", level: "Beginner", color: "from-green-600 to-teal-600" }
-      ],
-      animation: "animate-slide-in-right hover:-rotate-1"
+        { name: "Flask", level: "Intermediate", icon: SiFlask, color: "#000000" },
+        { name: "Django", level: "Beginner", icon: SiDjango, color: "#092E20" }
+      ]
     },
     {
       category: "Databases",
       skills: [
-        { name: "MySQL", level: "Intermediate", color: "from-blue-600 to-indigo-600" },
-        { name: "SQL", level: "Intermediate", color: "from-purple-500 to-pink-500" },
-        { name: "MongoDB", level: "Beginner", color: "from-green-500 to-lime-500" },
-        { name: "Pinecone", level: "Intermediate", color: "from-indigo-500 to-purple-500" },
-        { name: "FAISS", level: "Intermediate", color: "from-cyan-500 to-blue-500" }
-      ],
-      animation: "animate-fade-in hover:translate-x-2"
+        { name: "MySQL", level: "Intermediate", icon: SiMysql, color: "#4479A1" },
+        { name: "MongoDB", level: "Beginner", icon: SiMongodb, color: "#47A248" }
+      ]
     },
     {
       category: "AI & Machine Learning",
       skills: [
-        { name: "Machine Learning", level: "Intermediate", color: "from-pink-500 to-rose-500" },
-        { name: "Deep Learning", level: "Intermediate", color: "from-indigo-500 to-blue-500" },
-        { name: "NLP", level: "Intermediate", color: "from-purple-500 to-indigo-500" },
-        { name: "Data Science", level: "Intermediate", color: "from-emerald-500 to-teal-500" },
-        { name: "NumPy", level: "Intermediate", color: "from-blue-400 to-cyan-400" },
-        { name: "Pandas", level: "Intermediate", color: "from-indigo-400 to-purple-400" },
-        { name: "Scikit-learn", level: "Intermediate", color: "from-orange-400 to-amber-400" },
-        { name: "TensorFlow", level: "Intermediate", color: "from-orange-500 to-red-500" },
-        { name: "PyTorch", level: "Intermediate", color: "from-red-500 to-pink-500" },
-        { name: "OpenCV", level: "Intermediate", color: "from-green-500 to-emerald-500" },
-        { name: "OpenAI GPT", level: "Intermediate", color: "from-purple-600 to-pink-600" },
-        { name: "Google Gemini", level: "Intermediate", color: "from-blue-600 to-indigo-600" },
-        { name: "RAG", level: "Intermediate", color: "from-cyan-600 to-blue-600" }
-      ],
-      animation: "animate-scale-in hover:shadow-2xl"
+        { name: "NumPy", level: "Intermediate", icon: SiNumpy, color: "#013243" },
+        { name: "Pandas", level: "Intermediate", icon: SiPandas, color: "#150458" },
+        { name: "Scikit-learn", level: "Intermediate", icon: SiScikitlearn, color: "#F7931E" },
+        { name: "TensorFlow", level: "Intermediate", icon: SiTensorflow, color: "#FF6F00" },
+        { name: "PyTorch", level: "Intermediate", icon: SiPytorch, color: "#EE4C2C" },
+        { name: "OpenCV", level: "Intermediate", icon: SiOpencv, color: "#5C3EE8" },
+        { name: "OpenAI", level: "Intermediate", icon: SiOpenai, color: "#412991" }
+      ]
     },
     {
       category: "Tools & Platforms",
       skills: [
-        { name: "Git", level: "Intermediate", color: "from-orange-600 to-red-600" },
-        { name: "GitHub", level: "Intermediate", color: "from-gray-700 to-gray-900" },
-        { name: "Postman", level: "Intermediate", color: "from-orange-500 to-amber-500" },
-        { name: "Jupyter", level: "Intermediate", color: "from-orange-400 to-red-400" },
-        { name: "VS Code", level: "Advanced", color: "from-blue-500 to-cyan-500" },
-        { name: "IntelliJ IDEA", level: "Intermediate", color: "from-purple-600 to-pink-600" },
-        { name: "MySQL Workbench", level: "Intermediate", color: "from-blue-600 to-indigo-600" },
-        { name: "Jira", level: "Intermediate", color: "from-blue-500 to-purple-500" },
-        { name: "Docker", level: "Intermediate", color: "from-cyan-500 to-blue-500" }
-      ],
-      animation: "animate-fade-in hover:-translate-y-1"
+        { name: "Git", level: "Intermediate", icon: SiGit, color: "#F05032" },
+        { name: "GitHub", level: "Intermediate", icon: SiGithub, color: "#181717" },
+        { name: "Postman", level: "Intermediate", icon: SiPostman, color: "#FF6C37" },
+        { name: "Jupyter", level: "Intermediate", icon: SiJupyter, color: "#F37626" },
+        { name: "VS Code", level: "Advanced", icon: Code, color: "#007ACC" },
+        { name: "IntelliJ IDEA", level: "Intermediate", icon: SiIntellijidea, color: "#000000" },
+        { name: "Jira", level: "Intermediate", icon: SiJira, color: "#0052CC" },
+        { name: "Docker", level: "Intermediate", icon: SiDocker, color: "#2496ED" }
+      ]
     },
     {
       category: "Cloud Services",
       skills: [
-        { name: "Azure", level: "Beginner", color: "from-blue-600 to-cyan-600" }
-      ],
-      animation: "animate-slide-in-right hover:scale-110"
-    },
-    {
-      category: "Soft Skills",
-      skills: [
-        { name: "Problem Solving", level: "Advanced", color: "from-green-500 to-emerald-500" },
-        { name: "Communication", level: "Advanced", color: "from-blue-500 to-indigo-500" },
-        { name: "Team Collaboration", level: "Advanced", color: "from-purple-500 to-pink-500" },
-        { name: "Quick Learning", level: "Advanced", color: "from-orange-500 to-red-500" },
-        { name: "Adaptability", level: "Advanced", color: "from-cyan-500 to-blue-500" }
-      ],
-      animation: "animate-scale-in hover:rotate-2"
+        { name: "Azure", level: "Beginner", icon: Cloud, color: "#0078D4" }
+      ]
     }
   ];
 
@@ -218,19 +198,22 @@ const About = () => {
                     <h4 className="font-bold text-gray-900 mb-4 text-lg">
                       {category.category}
                     </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {category.skills.map((skill, skillIndex) => (
-                        <div
-                          key={skillIndex}
-                          className={`group relative px-4 py-2 rounded-full bg-gradient-to-r ${skill.color} text-white text-sm font-medium transition-all duration-300 hover:scale-110 hover:shadow-xl cursor-pointer`}
-                        >
-                          <span className="relative z-10">{skill.name}</span>
-                          <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-white text-gray-800 text-xs px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
-                            {skill.level}
-                          </span>
-                          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300"></div>
-                        </div>
-                      ))}
+                    <div className="flex flex-wrap gap-3">
+                      {category.skills.map((skill, skillIndex) => {
+                        const SkillIcon = skill.icon;
+                        return (
+                          <div
+                            key={skillIndex}
+                            className="group relative flex items-center gap-2 px-4 py-3 rounded-lg bg-background/50 border border-border hover:border-primary/50 text-foreground text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer backdrop-blur-sm"
+                          >
+                            <SkillIcon className="w-5 h-5" style={{ color: skill.color }} />
+                            <span className="relative z-10">{skill.name}</span>
+                            <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                              {skill.level}
+                            </span>
+                          </div>
+                        );
+                      })}
                     </div>
                   </CardContent>
                 </Card>
