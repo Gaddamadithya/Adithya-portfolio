@@ -87,7 +87,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 bg-white" ref={elementRef}>
-      <div className={`container mx-auto px-4 scroll-reveal ${isVisible ? 'scroll-reveal-visible' : ''}`}>
+      <div className={`container mx-auto px-4 scroll-reveal-scale ${isVisible ? 'scroll-reveal-scale-visible' : ''}`}>
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
             <Code2 className="w-10 h-10 text-blue-600 icon-pulse-hover" />
