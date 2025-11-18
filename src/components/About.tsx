@@ -9,9 +9,9 @@ import {
   SiMysql, SiMongodb, SiTensorflow, SiPytorch, SiOpencv, SiNumpy,
   SiPandas, SiScikitlearn, SiGit, SiGithub, SiPostman, SiJupyter,
   SiIntellijidea, SiJira, SiDocker,
-  SiHtml5, SiCss3, SiOpenai
+  SiHtml5, SiCss3, SiOpenai, SiGooglegemini
 } from 'react-icons/si';
-import { Coffee, Code, Cloud } from 'lucide-react';
+import { Coffee, Code, Cloud, Database, Brain, FileText } from 'lucide-react';
 
 
 const About = () => {
@@ -47,8 +47,8 @@ const About = () => {
     {
       category: "Web Development",
       skills: [
-        { name: "HTML", level: "Advanced", icon: SiHtml5, color: "#E34F26" },
-        { name: "CSS", level: "Advanced", icon: SiCss3, color: "#1572B6" },
+        { name: "HTML", level: "Intermediate", icon: SiHtml5, color: "#E34F26" },
+        { name: "CSS", level: "Intermediate", icon: SiCss3, color: "#1572B6" },
         { name: "JavaScript", level: "Intermediate", icon: SiJavascript, color: "#F7DF1E" },
         { name: "React.js", level: "Intermediate", icon: SiReact, color: "#61DAFB" },
         { name: "Node.js", level: "Intermediate", icon: SiNodedotjs, color: "#339933" }
@@ -65,19 +65,28 @@ const About = () => {
       category: "Databases",
       skills: [
         { name: "MySQL", level: "Intermediate", icon: SiMysql, color: "#4479A1" },
-        { name: "MongoDB", level: "Beginner", icon: SiMongodb, color: "#47A248" }
+        { name: "SQL", level: "Intermediate", icon: Database, color: "#336791" },
+        { name: "MongoDB", level: "Beginner", icon: SiMongodb, color: "#47A248" },
+        { name: "Pinecone", level: "Intermediate", icon: Database, color: "#00D4FF" },
+        { name: "FAISS", level: "Intermediate", icon: Database, color: "#0668E1" }
       ]
     },
     {
       category: "AI & Machine Learning",
       skills: [
+        { name: "Machine Learning", level: "Intermediate", icon: Brain, color: "#FF6B6B" },
+        { name: "Deep Learning", level: "Intermediate", icon: Brain, color: "#4ECDC4" },
+        { name: "NLP", level: "Intermediate", icon: FileText, color: "#95E1D3" },
+        { name: "Data Science", level: "Intermediate", icon: Brain, color: "#F38181" },
         { name: "NumPy", level: "Intermediate", icon: SiNumpy, color: "#013243" },
         { name: "Pandas", level: "Intermediate", icon: SiPandas, color: "#150458" },
         { name: "Scikit-learn", level: "Intermediate", icon: SiScikitlearn, color: "#F7931E" },
         { name: "TensorFlow", level: "Intermediate", icon: SiTensorflow, color: "#FF6F00" },
         { name: "PyTorch", level: "Intermediate", icon: SiPytorch, color: "#EE4C2C" },
         { name: "OpenCV", level: "Intermediate", icon: SiOpencv, color: "#5C3EE8" },
-        { name: "OpenAI", level: "Intermediate", icon: SiOpenai, color: "#412991" }
+        { name: "OpenAI GPT", level: "Intermediate", icon: SiOpenai, color: "#412991" },
+        { name: "Google Gemini", level: "Intermediate", icon: SiGooglegemini, color: "#4285F4" },
+        { name: "RAG", level: "Intermediate", icon: Brain, color: "#9B59B6" }
       ]
     },
     {
@@ -87,8 +96,9 @@ const About = () => {
         { name: "GitHub", level: "Intermediate", icon: SiGithub, color: "#181717" },
         { name: "Postman", level: "Intermediate", icon: SiPostman, color: "#FF6C37" },
         { name: "Jupyter", level: "Intermediate", icon: SiJupyter, color: "#F37626" },
-        { name: "VS Code", level: "Advanced", icon: Code, color: "#007ACC" },
+        { name: "VS Code", level: "Intermediate", icon: Code, color: "#007ACC" },
         { name: "IntelliJ IDEA", level: "Intermediate", icon: SiIntellijidea, color: "#000000" },
+        { name: "MySQL Workbench", level: "Intermediate", icon: SiMysql, color: "#4479A1" },
         { name: "Jira", level: "Intermediate", icon: SiJira, color: "#0052CC" },
         { name: "Docker", level: "Intermediate", icon: SiDocker, color: "#2496ED" }
       ]
@@ -204,7 +214,7 @@ const About = () => {
                         return (
                           <div
                             key={skillIndex}
-                            className="group relative flex items-center gap-2 px-4 py-3 rounded-lg bg-background/50 border border-border hover:border-primary/50 text-foreground text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer backdrop-blur-sm"
+                            className="group relative flex items-center gap-2 px-4 py-3 rounded-lg bg-background/50 border border-border hover:border-primary/50 text-foreground text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer backdrop-blur-sm animated-border"
                           >
                             <SkillIcon className="w-5 h-5" style={{ color: skill.color }} />
                             <span className="relative z-10">{skill.name}</span>
