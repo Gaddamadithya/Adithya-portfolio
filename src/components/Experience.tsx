@@ -8,17 +8,17 @@ import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Development Engineer (SDE)",
+      title: "Software Development Engineer (SDE) Intern",
       company: "Infotact Solutions",
       location: "Remote",
-      duration: "1 Month",
+      duration: "3 Month Internship",
       description: [
-        "Currently working as a Software Development Engineer, contributing to full-stack development projects.",
-        "Developing and maintaining web applications using modern technologies and frameworks.",
-        "Collaborating with cross-functional teams to deliver high-quality software solutions.",
-        "Implementing best practices in code quality, testing, and documentation."
+        "Completed a 3-month internship as a Software Development Engineer, contributing to full-stack development projects.",
+        "Developed and maintained web applications using modern technologies and frameworks.",
+        "Collaborated with cross-functional teams to deliver high-quality software solutions.",
+        "Implemented best practices in code quality, testing, and documentation."
       ],
-      current: true,
+      icon: <Briefcase className="w-6 h-6" />
     },
     {
       title: "Python Developer Intern",
@@ -100,11 +100,6 @@ const Experience = () => {
                         </h3>
                         <p className="text-lg text-primary font-semibold mb-2">
                           {exp.company}
-                          {exp.current && (
-                            <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-1 rounded-full">
-                              Current
-                            </span>
-                          )}
                         </p>
                         <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mb-4">
                           <span className="flex items-center gap-1">
