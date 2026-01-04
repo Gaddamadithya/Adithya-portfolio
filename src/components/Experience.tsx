@@ -32,6 +32,7 @@ const Experience = () => {
         "Collaborated with cross-functional teams to deliver high-quality software solutions.",
         "Implemented best practices in code quality, testing, and documentation."
       ],
+      certificateLink: "https://drive.google.com/file/d/1PHuKZhlqX4MTh6z0QzVNFmCJrThKpr8m/view?usp=drive_link",
       icon: <Briefcase className="w-6 h-6" />
     },
     {
