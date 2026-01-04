@@ -123,8 +123,7 @@ const About = () => {
           </h2>
           <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            I'm a passionate BCA student specializing in Python full-stack development. 
-            I love creating innovative solutions and learning new technologies to solve real-world problems.
+            6+ months of internship experience working on real-world full-stack web applications and AI/ML-driven projects. Strong ability to understand client and business requirements, collaborate with cross-functional teams, and deliver reliable end-to-end solutions using HTML, CSS, JavaScript, Python, Flask, RESTful APIs, and MySQL. Experienced in debugging, optimizing performance, and maintaining clean, production-ready code.
           </p>
           <div className="mt-6">
             <Button 
