@@ -67,8 +67,7 @@ const Hero = () => {
               </span>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-              BCA Final Year Student passionate about creating innovative web solutions 
-              with Python, React, and modern technologies. Building the future, one line of code at a time.
+              Software Engineer | AI/ML & Automation Engineer | React.js | Python | Flask | MySQL | Problem Solving | Exploring AI R&D
             </p>
             <div className="flex justify-center lg:justify-start">
               <Button 
