@@ -1,242 +1,219 @@
-
 import React from 'react';
-import { GraduationCap, MapPin, Calendar, Code2, Download, User } from 'lucide-react';
+import { ArrowUpRight, Download, GraduationCap, MapPin, Sparkles } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useScrollReveal } from '@/hooks/use-scroll-reveal';
-import { 
-  SiPython, SiJavascript, SiReact, SiNodedotjs, SiFlask, SiDjango,
-  SiMysql, SiMongodb, SiTensorflow, SiPytorch, SiOpencv, SiNumpy,
-  SiPandas, SiScikitlearn, SiGit, SiGithub, SiPostman, SiJupyter,
-  SiIntellijidea, SiJira, SiDocker,
-  SiHtml5, SiCss3, SiOpenai, SiGooglegemini
-} from 'react-icons/si';
-import { Coffee, Code, Cloud, Database, Brain, FileText } from 'lucide-react';
 
+const skillGroups = [
+  {
+    title: 'Frontend',
+    description: 'Interfaces, components, and responsive experiences',
+    items: ['React.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS']
+  },
+  {
+    title: 'Backend',
+    description: 'APIs, databases, and server-side workflows',
+    items: ['Node.js', 'Express.js', 'REST APIs', 'Authentication', 'MySQL', 'MongoDB']
+  },
+  {
+    title: 'AI & Automation',
+    description: 'LLM workflows and productivity-oriented systems',
+    items: ['OpenAI', 'Gemini', 'RAG', 'Prompt Engineering', 'Playwright', 'n8n']
+  },
+  {
+    title: 'Developer Tools',
+    description: 'Tooling used for development, testing, and delivery',
+    items: ['Git', 'GitHub', 'Postman', 'Jupyter', 'VS Code', 'Deployment']
+  },
+];
+
+const highlights = [
+  'Focused on product-minded engineering, not just writing code.',
+  'Comfortable building full-stack apps from UI to APIs and database integration.',
+  'Interested in AI systems that solve practical workflow problems.',
+];
+
+const education = [
+  {
+    degree: 'BTech in Computer Science and Engineering',
+    institution: 'Amrita Vishwa Vidyapeetham, Amaravati',
+    status: 'Expected Graduation: 2027',
+  },
+  {
+    degree: 'Intermediate (MPC)',
+    institution: 'Sri Chaitanya Academy Junior College, Tirupati',
+    status: 'Completed: 2023',
+  },
+  {
+    degree: 'Secondary School Certificate',
+    institution: 'PTM ZPHS High School',
+    status: 'Completed: 2021',
+  },
+];
 
 const About = () => {
-  const education = [
-    {
-      degree: "Bachelor of Computer Applications (BCA) — Final Year Student",
-      institution: "Aditya Degree College, B. Kotha Kota",
-      status: "Expected Graduation: 2026",
-      icon: <GraduationCap className="w-6 h-6" />
-    },
-    {
-      degree: "Intermediate (Commerce Stream)",
-      institution: "Sunku Usha Gowthami Memorial Junior College, B. Kotha Kota",
-      status: "Completed: 2023",
-      icon: <GraduationCap className="w-6 h-6" />
-    },
-    {
-      degree: "Secondary School Certificate (SSC)",
-      institution: "PTM ZPHS High School",
-      status: "Completed: 2021",
-      icon: <GraduationCap className="w-6 h-6" />
-    }
-  ];
-
-  const skillCategories = [
-    {
-      category: "Programming Languages",
-      skills: [
-        { name: "Python", level: "Advanced", icon: SiPython, color: "#3776AB" },
-        { name: "Java", level: "Intermediate", icon: Coffee, color: "#007396" }
-      ]
-    },
-    {
-      category: "Web Development",
-      skills: [
-        { name: "HTML", level: "Intermediate", icon: SiHtml5, color: "#E34F26" },
-        { name: "CSS", level: "Intermediate", icon: SiCss3, color: "#1572B6" },
-        { name: "JavaScript", level: "Intermediate", icon: SiJavascript, color: "#F7DF1E" },
-        { name: "React.js", level: "Intermediate", icon: SiReact, color: "#61DAFB" },
-        { name: "Node.js", level: "Intermediate", icon: SiNodedotjs, color: "#339933" }
-      ]
-    },
-    {
-      category: "Frameworks",
-      skills: [
-        { name: "Flask", level: "Intermediate", icon: SiFlask, color: "#000000" },
-        { name: "Django", level: "Beginner", icon: SiDjango, color: "#092E20" }
-      ]
-    },
-    {
-      category: "Databases",
-      skills: [
-        { name: "MySQL", level: "Intermediate", icon: SiMysql, color: "#4479A1" },
-        { name: "SQL", level: "Intermediate", icon: Database, color: "#336791" },
-        { name: "MongoDB", level: "Beginner", icon: SiMongodb, color: "#47A248" },
-        { name: "Pinecone", level: "Intermediate", icon: Database, color: "#00D4FF" },
-        { name: "FAISS", level: "Intermediate", icon: Database, color: "#0668E1" }
-      ]
-    },
-    {
-      category: "AI & Machine Learning",
-      skills: [
-        { name: "Machine Learning", level: "Intermediate", icon: Brain, color: "#FF6B6B" },
-        { name: "Deep Learning", level: "Intermediate", icon: Brain, color: "#4ECDC4" },
-        { name: "NLP", level: "Intermediate", icon: FileText, color: "#95E1D3" },
-        { name: "Data Science", level: "Intermediate", icon: Brain, color: "#F38181" },
-        { name: "NumPy", level: "Intermediate", icon: SiNumpy, color: "#013243" },
-        { name: "Pandas", level: "Intermediate", icon: SiPandas, color: "#150458" },
-        { name: "Scikit-learn", level: "Intermediate", icon: SiScikitlearn, color: "#F7931E" },
-        { name: "TensorFlow", level: "Intermediate", icon: SiTensorflow, color: "#FF6F00" },
-        { name: "PyTorch", level: "Intermediate", icon: SiPytorch, color: "#EE4C2C" },
-        { name: "OpenCV", level: "Intermediate", icon: SiOpencv, color: "#5C3EE8" },
-        { name: "OpenAI GPT", level: "Intermediate", icon: SiOpenai, color: "#412991" },
-        { name: "Google Gemini", level: "Intermediate", icon: SiGooglegemini, color: "#4285F4" },
-        { name: "RAG", level: "Intermediate", icon: Brain, color: "#9B59B6" }
-      ]
-    },
-    {
-      category: "Tools & Platforms",
-      skills: [
-        { name: "Git", level: "Intermediate", icon: SiGit, color: "#F05032" },
-        { name: "GitHub", level: "Intermediate", icon: SiGithub, color: "#181717" },
-        { name: "Postman", level: "Intermediate", icon: SiPostman, color: "#FF6C37" },
-        { name: "Jupyter", level: "Intermediate", icon: SiJupyter, color: "#F37626" },
-        { name: "VS Code", level: "Intermediate", icon: Code, color: "#007ACC" },
-        { name: "IntelliJ IDEA", level: "Intermediate", icon: SiIntellijidea, color: "#000000" },
-        { name: "MySQL Workbench", level: "Intermediate", icon: SiMysql, color: "#4479A1" },
-        { name: "Jira", level: "Intermediate", icon: SiJira, color: "#0052CC" },
-        { name: "Docker", level: "Intermediate", icon: SiDocker, color: "#2496ED" }
-      ]
-    },
-    {
-      category: "Cloud Services",
-      skills: [
-        { name: "Azure", level: "Beginner", icon: Cloud, color: "#0078D4" }
-      ]
-    }
-  ];
-
   const { elementRef, isVisible } = useScrollReveal();
 
   return (
-    <section id="about" className="py-20 bg-gray-50" ref={elementRef}>
-      <div className={`container mx-auto px-4 scroll-reveal-left ${isVisible ? 'scroll-reveal-left-visible' : ''}`}>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
-            <User className="w-10 h-10 text-blue-600 icon-pulse-hover" />
-            About Me
+    <section
+      id="about"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f7fbff_45%,#f5f8fc_100%)] py-24"
+      ref={elementRef}
+    >
+      <div className="absolute inset-0 opacity-70">
+        <div className="absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-sky-100 blur-3xl" />
+        <div className="absolute right-[-8%] top-1/3 h-80 w-80 rounded-full bg-emerald-100 blur-3xl" />
+      </div>
+
+      <div className={`container relative mx-auto px-4 scroll-reveal-left ${isVisible ? 'scroll-reveal-left-visible' : ''}`}>
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-700">About</p>
+          <h2 className="mt-4 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
+            Building practical digital products with thoughtful engineering
           </h2>
-          <hr className="w-24 mx-auto mb-6 hr-gradient-animated" />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            6+ months of internship experience working on real-world full-stack web applications and AI/ML-driven projects. Strong ability to understand client and business requirements, collaborate with cross-functional teams, and deliver reliable end-to-end solutions using HTML, CSS, JavaScript, Python, Flask, RESTful APIs, and MySQL. Experienced in debugging, optimizing performance, and maintaining clean, production-ready code.
+          <p className="mt-6 text-lg leading-8 text-slate-600">
+            I&apos;m a final-year computer science student who enjoys combining clean interfaces, reliable backend systems,
+            and AI-powered workflows to build useful software with real-world value.
           </p>
-          <div className="mt-6">
-            <Button 
-              asChild
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
-            >
-              <a 
-                href="https://drive.google.com/file/d/19C7z1CLA4bL_rOezd9KO9ihlgH7cXu2n/view?usp=drive_link" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </a>
-            </Button>
-          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Education & Bio */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <GraduationCap className="mr-3 text-blue-600" />
-              Education & Background
-            </h3>
-            <div className="space-y-6">
-              {education.map((edu, index) => (
-                <Card key={index} className="animated-border hover:shadow-lg transition-all duration-300">
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-8">
+            <div className="rounded-[2rem] border border-slate-200/70 bg-white/[0.85] p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] backdrop-blur">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Profile</p>
+                  <h3 className="mt-3 text-3xl font-bold text-slate-950">A grounded builder with an AI edge</h3>
+                </div>
+                <Button
+                  asChild
+                  className="rounded-full bg-slate-950 px-5 text-white hover:bg-slate-800"
+                >
+                  <a
+                    href="https://drive.google.com/file/d/1tekFoCi-CtVU4KIRyozXRv-nHXEGa1My/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download className="mr-2 h-4 w-4" />
+                    Resume
+                  </a>
+                </Button>
+              </div>
+
+              <p className="mt-6 text-base leading-8 text-slate-600">
+                My work is centered around full-stack applications, AI-powered products, and developer-focused automation.
+                I like solving messy practical problems, whether that means designing a better user flow, structuring APIs well,
+                or using LLM workflows to reduce manual effort.
+              </p>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-2xl font-bold text-slate-950">8+</p>
+                  <p className="mt-1 text-sm text-slate-600">Portfolio-ready projects</p>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-2xl font-bold text-slate-950">Full Stack</p>
+                  <p className="mt-1 text-sm text-slate-600">From frontend experience to backend logic</p>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-2xl font-bold text-slate-950">AI Systems</p>
+                  <p className="mt-1 text-sm text-slate-600">LLM, RAG, testing, and automation workflows</p>
+                </div>
+              </div>
+
+              <div className="mt-8 space-y-3">
+                {highlights.map((item) => (
+                  <div key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50 px-4 py-4">
+                    <div className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500" />
+                    <p className="text-sm leading-7 text-slate-600">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {skillGroups.map((group) => (
+                <Card key={group.title} className="border-slate-200/70 bg-white/[0.8] shadow-[0_20px_55px_rgba(15,23,42,0.05)]">
                   <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="text-blue-600 mt-1">
-                        {edu.icon}
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 mb-1">{edu.degree}</h4>
-                        <p className="text-gray-600 mb-2">{edu.institution}</p>
-                        <div className="flex items-center space-x-4 text-sm text-gray-500">
-                          <span className={`px-2 py-1 rounded-full text-xs ${
-                            edu.status.includes('Expected') 
-                              ? 'bg-blue-100 text-blue-800' 
-                              : 'bg-green-100 text-green-800'
-                          }`}>
-                            {edu.status}
-                          </span>
-                        </div>
-                      </div>
+                    <h4 className="text-lg font-semibold text-slate-950">{group.title}</h4>
+                    <p className="mt-2 text-sm leading-6 text-slate-500">{group.description}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {group.items.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600"
+                        >
+                          {item}
+                        </span>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
-
-            <Card className="mt-6 bg-blue-50 border-blue-200">
-              <CardContent className="p-6">
-                <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-blue-600" />
-                  Contact Information
-                </h4>
-                <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Phone:</span> +91 9182177915</p>
-                  <p><span className="font-medium">Location:</span> India</p>
-                  <p><span className="font-medium">Status:</span> Available for opportunities</p>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
-          {/* Skills */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <Code2 className="mr-3 text-blue-600" />
-              Technical Skills
-            </h3>
-            <div className="space-y-6">
-              {skillCategories.map((category, catIndex) => (
-                <Card 
-                  key={catIndex} 
-                  className="overflow-hidden border-0 shadow-lg"
-                >
-                  <CardContent className="p-5">
-                    <h4 className="font-bold text-gray-900 mb-4 text-lg">
-                      {category.category}
-                    </h4>
-                    <div className="flex flex-wrap gap-3">
-                      {category.skills.map((skill, skillIndex) => {
-                        const SkillIcon = skill.icon;
-                        return (
-                          <div
-                            key={skillIndex}
-                            className="group relative flex items-center gap-2 px-4 py-3 rounded-lg bg-background/50 border border-border hover:border-primary/50 text-foreground text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer backdrop-blur-sm animated-border"
-                          >
-                            <SkillIcon className="w-5 h-5" style={{ color: skill.color }} />
-                            <span className="relative z-10">{skill.name}</span>
-                            <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
-                              {skill.level}
-                            </span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+          <div className="space-y-8">
+            <div className="rounded-[2rem] border border-slate-200/70 bg-slate-950 p-8 text-white shadow-[0_28px_80px_rgba(15,23,42,0.18)]">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Current Focus</p>
+              <h3 className="mt-4 text-3xl font-bold">The kind of work I want to do more of</h3>
+              <div className="mt-6 space-y-4">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-sm text-slate-300">AI-powered product features</p>
+                  <p className="mt-1 text-base text-white">Interfaces and workflows that feel useful, not gimmicky</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-sm text-slate-300">Robust full-stack delivery</p>
+                  <p className="mt-1 text-base text-white">Clean frontend systems, backend APIs, and reliable integrations</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-sm text-slate-300">Developer automation</p>
+                  <p className="mt-1 text-base text-white">Testing, productivity tooling, and AI-assisted engineering workflows</p>
+                </div>
+              </div>
             </div>
 
-            <Card className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border-0 hover:shadow-2xl transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <h4 className="font-bold text-gray-900 mb-2">Always Learning</h4>
-                <p className="text-gray-600">
-                  Frontend finesse + backend logic = Python Full Stack Magic 🧠💫
-                </p>
-              </CardContent>
-            </Card>
+            <div className="rounded-[2rem] border border-slate-200/70 bg-white/[0.85] p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
+              <div className="flex items-center gap-3">
+                <GraduationCap className="h-6 w-6 text-sky-600" />
+                <h3 className="text-2xl font-bold text-slate-950">Education</h3>
+              </div>
+              <div className="mt-6 space-y-4">
+                {education.map((item) => (
+                  <div key={item.degree} className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <p className="font-semibold text-slate-900">{item.degree}</p>
+                    <p className="mt-1 text-sm text-slate-600">{item.institution}</p>
+                    <p className="mt-3 inline-flex rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-600 ring-1 ring-slate-200">
+                      {item.status}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-slate-200/70 bg-gradient-to-br from-sky-50 to-white p-8 shadow-[0_22px_60px_rgba(14,165,233,0.08)]">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.26em] text-sky-700">Availability</p>
+                  <h3 className="mt-3 text-2xl font-bold text-slate-950">Open to internships and impactful projects</h3>
+                </div>
+                <Sparkles className="h-6 w-6 text-sky-600" />
+              </div>
+              <div className="mt-6 space-y-3 text-sm text-slate-600">
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-4 w-4 text-sky-600" />
+                  India
+                </div>
+                <div className="flex items-center gap-3">
+                  <ArrowUpRight className="h-4 w-4 text-sky-600" />
+                  Remote opportunities and collaborative product work
+                </div>
+                <div className="flex items-center gap-3">
+                  <ArrowUpRight className="h-4 w-4 text-sky-600" />
+                  Looking for roles in full-stack, AI, and developer tooling
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
