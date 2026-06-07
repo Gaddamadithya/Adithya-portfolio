@@ -42,7 +42,7 @@ const Header = () => {
               isScrolled ? 'text-slate-900' : 'text-white'
             }`}
           >
-            Gaddam Adithya
+            Gaddam Adithya.............
           </button>
 
           <nav className="hidden items-center gap-2 md:flex">
